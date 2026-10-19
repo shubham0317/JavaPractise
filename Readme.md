@@ -20,7 +20,7 @@ My goal is to build strong Java fundamentals through consistent practice, write 
 ## 🛠️ Technologies & Tools
 
 - **Language:** Java
-- **JDK:** Java 17
+- **JDK:** Java 8
 - **IDE:** Eclipse IDE
 - **Version Control:** Git & GitHub
 
