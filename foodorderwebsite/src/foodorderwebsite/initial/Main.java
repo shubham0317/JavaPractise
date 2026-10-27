@@ -46,7 +46,40 @@ public class Main {
 			
 			customer.showRole();
 			admin.showRole();
+			
+			NotificationService nscc = new SMSNotificationService();
+			
+			OrderService orderService =  new OrderService(nscc);
+			orderService.orderPlaced();
 		
+			OrderService pushOrder =
+			        new OrderService(new PushNotificationService());
+
+			pushOrder.orderPlaced();
+			
+			
+			PaymentService upiService =
+			        new PaymentService(new UPIPayment());
+
+			PaymentService cardService =
+			        new PaymentService(new CardPayment());
+
+			upiService.processPayment(500);
+			System.out.println("--------------");
+			cardService.processPayment(1000);
+			
+			
+			Order order1 = new Order();
+			Order order2 = new Order();
+			Order order3 = new Order();
+
+			order1.displayOrderId();
+			order2.displayOrderId();
+			order3.displayOrderId();
+
+			System.out.println("Total orders: " + Order.getTotalOrders());
 		
 	}
+     
+     
 }
