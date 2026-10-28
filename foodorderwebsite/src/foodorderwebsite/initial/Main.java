@@ -78,6 +78,19 @@ public class Main {
 			order3.displayOrderId();
 
 			System.out.println("Total orders: " + Order.getTotalOrders());
+			
+			
+			 Order order = new Order();
+
+		        order.displayOrderId();
+		        order.displayOrderStatus();
+
+		        order.updateStatus(OrderStatus.CONFIRMED);
+		        order.updateStatus(OrderStatus.PREPARING);
+		        order.updateStatus(OrderStatus.OUT_FOR_DELIVERY);
+		        order.updateStatus(OrderStatus.DELIVERED);
+
+		        order.displayOrderStatus();
 		
 	}
      
