@@ -13,6 +13,14 @@ public interface IBooking {
 	public abstract Booking chekcStatus();
 	SearchResult search();
 	public default void autoUpgrade() {
+		connectToDB();
 		System.out.println("IBooking.autoUpgrade");
+	}
+	public static void printTicket(String path, String content) {
+		System.out.println("Printing ticket ... Static method....");
+	}
+	
+	private void connectToDB() {
+		System.out.println("Connecting to DB");
 	}
 }
