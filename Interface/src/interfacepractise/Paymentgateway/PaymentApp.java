@@ -12,5 +12,6 @@ public class PaymentApp {
 		PaymentGateway upi =  new UPIPayment();
 		upi.validateTransaction();
 		upi.processPayment(5000);
+		
 	}
 }
