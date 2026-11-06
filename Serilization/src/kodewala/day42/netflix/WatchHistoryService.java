@@ -18,12 +18,9 @@ public class WatchHistoryService {
 	}
 	
 	
-	
 	public NetflixUser loadWatchHistory(String pathName) throws IOException, ClassNotFoundException {
-		
 		FileInputStream fis =  new FileInputStream(pathName);
 		ObjectInputStream oos = new ObjectInputStream(fis);
-		
 		NetflixUser user = (NetflixUser) oos.readObject();
 		System.out.println("Successfully loaded watch history...");
 		return user;
