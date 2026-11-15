@@ -105,8 +105,27 @@ public class Candidate {
 	public int getCandidateId() {
 		return candidateId;
 	}
-	
-	
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(candidateId);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null ||getClass() != obj.getClass())
+			return false;
+		Candidate other = (Candidate) obj;
+		return candidateId == other.candidateId;
+	}
+
+	@Override
+	public String toString() {
+		return "Candidate [candidateId=" + candidateId + ", candidateName=" + candidateName + ", email=" + email
+				+ ", phoneNo=" + phoneNo + ", jobAppliaction=" + jobAppliaction + "]";
+	}
 	
 	
 }
